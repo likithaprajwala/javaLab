@@ -1,0 +1,58 @@
+package main;
+class Person {
+    private String name;
+    private int age;
+    private double balance;
+    public Person(String name, int age,double balance) {
+        setName(name); // Using setter for initial assignment
+        setAge(age); // Using setter for initial assignment
+        setBalance(balance);
+    }
+    public String getName() {
+        return name;
+    }
+    public void setName(String name) {
+        // Optional: Add validation logic here
+        this.name = name;
+    }
+    public double getBalance() {
+        return balance;
+    }
+    public void setBalance(double balance) {
+        // Optional: Add validation logic here
+        this.balance=balance;
+    }
+    public int getAge() {
+        return age;
+    }
+    public void setAge(int age) {
+        if (age >= 0) { // Example of validation
+            this.age = age;
+        } else {
+            System.out.println("Age cannot be negative.");
+        }
+    }
+}
+public class encapsulation {
+	public static void main(String[] args) {
+		Person s1= new Person("likki",19,23.5);
+		String name =s1.getName();
+
+		System.out.println("name of person1 : "+name);
+
+		System.out.println("age person1: "+s1.getAge());
+
+		System.out.println("balance of 1:"+s1.getBalance());
+		Person s2= new Person("likitha",9,12.3);
+
+		System.out.println("NAME 2: "+s2.getName());
+
+		System.out.println("age person1: "+s2.getAge());
+
+		System.out.println("balance of 2:"+s2.getBalance());
+
+	}
+
+
+
+}
