@@ -1,0 +1,51 @@
+package main;
+import java.util.Scanner;
+//import java.lang.*;
+class Student {
+	String name;
+	int age;
+	float marks;
+	Student() {
+		System.out.println("this is default constructor");
+    }
+	Student(String name,int age,float marks){
+		this.name=name;
+		this.age=age;
+		this.marks=marks;
+//		System.out.println("name:"+this.name);
+	}
+	Student(String name,int age){
+		this.name=name;
+		this.age=age;
+		marks=97;
+	}
+	void display(){
+		System.out.println("name:"+this.name);
+		System.out.println("age:"+this.age);
+		System.out.println("marks:"+this.marks);
+	}
+}
+public class Program {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		String name=sc.nextLine();
+		//3 parameters
+		Student s1= new Student(name,18,98.0f);
+		s1.display();
+		//no parameters
+		Student s2= new Student();
+		s2.name="likitha";
+		s2.age=18;
+		s2.marks=90.7f;
+		s2.display();
+		//2 parameters
+		Student s3= new Student(name,18);
+		s3.display();
+		//no parameters
+		Student s4= new Student();
+		s4.name="praj";
+		s4.age=18;
+		s4.display();
+	}
+}
+
